@@ -110,6 +110,15 @@ hr {
   color: #fff;
 }
 
+.logged-in #navigation.sticky {
+  top: 32px !important;
+}
+
+@media (max-width: 782px) {
+  .logged-in #navigation.sticky {
+    top: 46px !important;
+  }
+}
 .container-fluid {
   overflow: hidden;
 }
