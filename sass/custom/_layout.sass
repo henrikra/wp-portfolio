@@ -1,0 +1,65 @@
+.wrapper
+	max-width: 960px
+	margin: 0px auto
+
+
+/*--- Header ---*/
+#header
+	height: 100vh
+	background: 
+		image: url("../images/header-bg.jpg")
+		size: cover
+		position: top
+		attachment: fixed
+	display: flex
+	justify-content: center
+	align-items: center
+	overflow: hidden
+	position: relative
+	text-align: center
+		
+	.header--full-name
+		font-size: 70px
+		font-weight: 400
+		margin: 10px 0 0
+		
+	.header--job-title
+		margin: 0 0 50px
+		font-size: 50px
+
+	.header--continue-btn
+		position: absolute
+		bottom: 40px
+		background: transparent
+		font-size: 40px
+		left: 50%
+		border: 2px solid #666
+		@include border-radius(50%)
+		padding: 8px 17px
+		margin-left: -39px
+		color: #666
+		display: none
+		
+		&:focus
+			outline: #fff dotted 1px
+		
+		&:hover
+			border-color: $main-blue
+			color: $main-blue
+			
+		.glyphicon
+			top: 7px
+			left: 1px
+
+/*--- Navbar ---*/
+#navigation
+	z-index: 3
+	border-bottom: 0
+	@include border-radius(0)
+	
+	.active
+		border-bottom: solid $main-blue 4px
+
+	.navbar-header	
+		a
+			color: #fff
