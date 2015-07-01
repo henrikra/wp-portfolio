@@ -3,6 +3,13 @@
 	Template Name: Home Page
  */
 
+/* Advanced Custom Fields */
+// About ME
+$about_me_title_icon		= get_field('about_me_title_icon');
+$about_me_title				= get_field('about_me_title');
+$about_me_content			= get_field('about_me_content');
+$about_me_link_button_text	= get_field('about_me_link_button_text');
+
 get_header(); ?>
 
 <section id="about" class="section">
@@ -10,7 +17,31 @@ get_header(); ?>
 		<article class="wrapper">
 			<div class="row">
 				<div class="col-sm-12">
-					<h2 class="section--header"><i class="fa fa-male"></i> Minusta</h2>
+					<h2 class="section--header">
+
+						<!-- Show selected icon -->
+						<?php
+						switch ($about_me_title_icon) {
+							case "No Icon":
+								break;
+							case "Info Icon":
+								echo '<i class="fa fa-info"></i>';
+								break;
+							case "User Icon":
+								echo '<i class="fa fa-user"></i>';
+								break;
+							case "Male Icon":
+								echo '<i class="fa fa-male"></i>';
+								echo 'lol';
+								break;
+							case "Female Icon":
+								echo '<i class="fa fa-female"></i>';
+								break;
+						}
+						?>
+
+						<?php echo ' ' . $about_me_title; ?>
+					</h2>
 				</div>
 			</div>
 			<div class="row">
@@ -23,11 +54,12 @@ get_header(); ?>
 				</div>
 				<div class="col-sm-8">
 					<div class="about-me">
-						<p>Moi!</p>
-						<p>Olen Henrik Raitasola ja minä tuotan asiakkaille heidän toiveidensa mukaisia, tyylikkäitä ja tehokkaita nettisivuja. Tältä sivulta löydät tietoa teknisestä osaamisestani, työkokemuksestani ja projekteista, joita olen työstänyt.</p>
-						<p>Tavoitteeni on pysyä web-osaamisen kärjessä jatkuvasti tutkimalla ja käyttämällä uusimpia teknologioita. Aito kiinnostus web-sovellusten ohjelmointiin pitää minut motivoituneena, minkä takia haluan olla aina ylpeä työni jäljestä.</p>
-						<p>Voit ottaa minuun yhteyttä sivun lopussa olevasta lomakkeesta!</p>
-						<button id="to-portfolio-btn" type="button" class="btn btn-success btn-lg btn-block">Katso töitäni</button>
+						<?php echo $about_me_content; ?>
+
+						<!-- Button -->
+						<?php if( !empty($about_me_link_button_text)) : ?> 	
+						<button id="to-portfolio-btn" type="button" class="btn btn-success btn-lg btn-block"><?php echo $about_me_link_button_text; ?></button>
+						<?php endif; ?>
 					</div>
 				</div>
 			</div>
