@@ -19,27 +19,10 @@ get_header(); ?>
 				<div class="col-sm-12">
 					<h2 class="section--header">
 
-						<!-- Show selected icon -->
-						<?php
-						switch ($about_me_title_icon) {
-							case "No Icon":
-								break;
-							case "Info Icon":
-								echo '<i class="fa fa-info"></i>';
-								break;
-							case "User Icon":
-								echo '<i class="fa fa-user"></i>';
-								break;
-							case "Male Icon":
-								echo '<i class="fa fa-male"></i>';
-								echo 'lol';
-								break;
-							case "Female Icon":
-								echo '<i class="fa fa-female"></i>';
-								break;
-						}
-						?>
+						<!-- Print user-selected title icon -->
+						<?php echo '<i class="fa fa-' . $about_me_title_icon . '"></i>'; ?>
 
+						<!-- Print user-defined title -->
 						<?php echo ' ' . $about_me_title; ?>
 					</h2>
 				</div>
