@@ -221,9 +221,17 @@ get_header(); ?>
 			<div class="row">
 				<div class="col-sm-6 hr-center hr-extra-margin"><hr/></div>
 			</div>
+			<?php
+			$loop = new WP_Query(array(
+				'post_type' => 'job',
+				'orderby' => 'post_id',
+				'order' => 'DESC'
+			));
+			?>
+			<?php while($loop->have_posts()) : $loop->the_post(); ?>
 			<div class="row">
 				<div class="col-sm-12">
-					<div id="job1" class="job panel panel-default">
+					<div class="job panel panel-default">
 						<div class="panel-heading">
 							<div class="row">
 								<div class="col-sm-1 col-xs-2">
@@ -231,71 +239,20 @@ get_header(); ?>
 									alt="Open/Close arrow">
 								</div>
 								<div class="col-sm-3 col-xs-10">
-									<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/hellewi_logo.png"
+									<img src="<?php echo get_field('company_logo')['url'] ?>"
 									class="company-logo img-responsive" alt="Hellewi logo">
 								</div>
-								<div class="col-sm-5"><h3>Web Developer - Hellewi</h3></div>
-								<div class="working-time col-sm-3">Touko 2015 - Nykyhetki</div>
+								<div class="col-sm-5"><h3><?php the_field('job_title'); ?><?php echo ' - '; the_field('company_name'); ?></h3></div>
+								<div class="working-time col-sm-3"><?php the_field('job_start_date'); ?> - <?php the_field('job_end_date'); ?></div>
 							</div>
 						</div>
 						<div class="panel-body">
-							<p>Teen tällä hetkellä <a href="http://www.hellewi.fi/" target="_blank">Hellewissä</a> toiminnanohjausjärjestelmän front-end puolta. Käyttöliittymän teossa olen tiiviissä yhteistyössä asiakkaan kanssa. Yhteistyöhön kuuluu muun muassa etäpalavereja sekä käyttäjätestejä noin kahden viikoin välein.</p>
-							<p>Teen mahdollisimman paljon lopputuotetta kuvaavia prototyyppejä, jotta asiakas saa hyvän tuntuman miltä lopullinen ohjelma tuntuu. Keskityn käyttäjätestien avulla siihen, että käyttöliittymästä tulee mahdollisimman intuitiivinen ja selkeä.</p>
-							<p>Projektissa on käytössä MEAN-stack ja muita moderneja tekniikoita, joiden avulla saan tuotteen tuntumaan siltä miltä oikea lopullinen tuote tuntuu ilman back-endin ohjelmointia.</p>
-							<p>Työpaikassa käyttämäni tekniikat: AngularJS, Jade, Stylus, CoffeeScript, Node.js</p>								</div>
-					</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-sm-12">
-					<div id="job1" class="job panel panel-default">
-						<div class="panel-heading">
-							<div class="row">
-								<div class="col-sm-1 col-xs-2">
-									<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/arrow-right.png" class="arrow"
-									alt="Open/Close arrow">
-								</div>
-								<div class="col-sm-3 col-xs-10">
-									<img src="http://www.empower.eu/empower-www-theme/images/empower/logo.png"
-									class="company-logo img-responsive" alt="Empower logo">
-								</div>
-								<div class="col-sm-5"><h3>IT Trainee - Empower Oy</h3></div>
-								<div class="working-time col-sm-3">Kesä 2014 - Joulu 2015</div>
-							</div>
-						</div>
-						<div class="panel-body">
-							<p>Työskentelin <a href="http://www.empower.eu/web/fi/" target="_blank">Empowerilla</a> kesällä täysipäiväisesti ja syksyllä jatkoin etätöiden muodossa koulun ohella. </p>
-							<p>Empowerilla käytin ASP.NET sovelluskehystä, jolla kehitin verkkoapplikaatiota, joka on tarkoitettu uusien palvelupyyntöjen delegoimiseen, läpikäymiseen ja hallinnointiin. Lopulliseen tuotokseen sain kaikki toivotut toiminnot ja lisäksi monikielisyystuen, joka valmisti sovelluksen valmiiksi tuotantoon muihin Empowerin toimintamaihin.</p>
-							<p>SQL Server ja Dynamics AX:n käyttö oli joka päiväisessä työrutiinissa, johon kuului myös integraatioon liittyvien sanomaongelmien tutkimista. Lisäksi tein satunnaisia koodaustöitä esimerkiksi Visual Basicilla.</p>
-							<p>Työpaikassa käyttämäni tekniikat: HTML, CSS, ASP.NET, JavaScript, Visual Basic, C#, SQL Server, Dynamics AX, JIRA</p>
+							<?php the_field('job_description'); ?>
 						</div>
 					</div>
 				</div>
 			</div>
-			<div class="row">
-				<div class="col-sm-12">
-					<div id="job2" class="job panel panel-default">
-						<div class="panel-heading">
-							<div class="row">
-								<div class="col-sm-1 col-xs-2">
-									<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/arrow-right.png" class="arrow"
-									alt="Open/Close arrow">
-								</div>
-								<div class="col-sm-3 col-xs-10">
-									<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/posti_logo.png" class="company-logo img-responsive"
-									alt="Posti logo">
-								</div>
-								<div class="col-sm-5"><h3>Postityöntekijä - Itella Oy</h3></div>
-								<div class="working-time col-sm-3">Kesä 2011 - Joulu 2013</div>
-							</div>
-						</div>
-						<div class="panel-body">
-							<p><a href="http://www.posti.fi/" target="_blank">Postissa</a> olen työskennellyt kesäisin postinjakajana perusjakelussa ja jouluisin varastotyöntekijänä logistiikkakeskuksessa.</p>
-							<p>Perusjakelussa työtehtäviin kuului: lajittelua, oman reitin jakamista autolla tai polkupyörällä ja kirjeiden uudelleenlähetystä. Logistiikkakeskuksessa työtehtävinä oli: pakettien syöttö ja lajittelu sekä täysien rullausyksiköiden ohjaaminen eteenpäin tuotantoprosessissa.</p>
-						</div>
-					</div>
-				</div>
-			</div>
+			<?php endwhile; ?>
 		</article>
 	</div>
 </section>
@@ -381,9 +338,7 @@ get_header(); ?>
 							</div>
 						</div>
 						<div id="right-input-box" class="col-sm-8">
-							<textarea name="message" class="form-control" placeholder="<?php echo $contact_form_message; ?>">
-								<?php echo isset($fields['message']) ? e($fields['message']) : '' ?>
-							</textarea>
+							<textarea name="message" class="form-control" placeholder="<?php echo $contact_form_message; ?>"><?php echo isset($fields['message']) ? e($fields['message']) : '' ?></textarea>
 						</div>
 					
 				</div>
