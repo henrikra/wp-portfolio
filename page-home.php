@@ -4,11 +4,26 @@
  */
 
 /* Advanced Custom Fields */
-// About ME
-$about_me_title_icon		= get_field('about_me_title_icon');
-$about_me_title				= get_field('about_me_title');
-$about_me_content			= get_field('about_me_content');
+// About Me
+$about_me_title_icon				= get_field('about_me_title_icon');
+$about_me_title							= get_field('about_me_title');
+$about_me_content						= get_field('about_me_content');
 $about_me_link_button_text	= get_field('about_me_link_button_text');
+
+//Contact
+$contact_title_icon									= get_field('contact_title_icon');
+$contact_title 											= get_field('contact_title');
+$contact_email											= get_field('contact_email');
+$contact_phone											= get_field('contact_phone');
+$contact_location										= get_field('contact_location');
+$contact_form_name									= get_field('contact_form_name');
+$contact_form_email									= get_field('contact_form_email');
+$contact_form_phone									= get_field('contact_form_phone');
+$contact_form_message								= get_field('contact_form_message');
+$contact_button_text								= get_field('contact_button_text');
+$contact_github											= get_field('contact_github');
+$contact_linkedin										= get_field('contact_linkedin');
+
 
 get_header(); ?>
 
@@ -290,7 +305,15 @@ get_header(); ?>
 			
 			<div class="row">
 				<div class="col-sm-12">
-					<h2 class="section--header">Ota yhteyttä</h2>
+					<h2 class="section--header">
+
+						<!-- Print user-selected title icon-->
+						<?php echo '<i class="fa fa-' . $contact_title_icon . '"></i>'; ?>
+
+						<!-- Print user-defined title-->
+						<?php echo $contact_title ?>
+
+					</h2>
 				</div>
 			</div>
 			<div class="row">
@@ -300,26 +323,30 @@ get_header(); ?>
 			<div class="row">
 				<div class="col-sm-4">
 					<div class="contact-item">
-						<a href="mailto:henrik.raitasola@gmail.com">
+						<a href="mailto:<?php echo $contact_email; ?>">
 							<i class="fa fa-envelope-o"></i>
-							<div class="contact-item-text">henrik.raitasola@gmail.com</div>
+							<div class="contact-item-text">
+								<?php echo $contact_email; ?>
+							</div>
 						</a>
 					</div>
 				</div>
 				<div class="col-sm-4">
 					<div class="contact-item">
-						<a href="tel:+358400637916">
+						<a href="tel:<?php echo $contact_phone; ?>">
 							<i class="fa fa-mobile"></i>
-							<div class="contact-item-text">+358 400 637916</div>
+							<div class="contact-item-text">
+								<?php echo $contact_phone; ?>
+							</div>
 						</a>
 					</div>
 				</div>
 				<div class="col-sm-4">
 					<div class="contact-item">
-						<a href="https://www.google.com/maps/place/00100+Helsinki,+Suomi/@60.1733239,24.9410248,15z/data=!3m1!4b1!4m2!3m1!1s0x46920bc796210691:0xcd4ebd843be2f763"
+						<a href="https://www.google.com/maps/place/<?php echo $contact_location; ?>"
 						target="_blank">
 							<i class="fa fa-map-marker"></i>
-							<div class="contact-item-text">Helsinki, Suomi</div>
+							<div class="contact-item-text"><?php echo $contact_location; ?></div>
 						</a>
 					</div>
 				</div>
@@ -336,39 +363,50 @@ get_header(); ?>
 						<div class="col-sm-4">
 							<div class="row">
 								<div class="col-sm-12">
-									<input type="text" name="name" class="left-input-box form-control" placeholder="Nimi"
+									<input type="text" name="name" class="left-input-box form-control" placeholder="<?php echo $contact_form_name; ?>"
 									<?php echo isset($fields['name']) ? 'value="' . e($fields['name']) . '"': '' ?>>
 								</div>
 							</div>
 							<div class="row">
 								<div class="col-sm-12">
-									<input type="email" name="email" class="left-input-box form-control" placeholder="Sähköposti"
+									<input type="email" name="email" class="left-input-box form-control" placeholder="<?php echo $contact_form_email; ?>"
 									<?php echo isset($fields['email']) ? 'value="' . e($fields['email']) . '"': '' ?>>
 								</div>
 							</div>
 							<div class="row">
 								<div class="col-sm-12">
-									<input type="tel" name="phone" class="left-input-box form-control" placeholder="Puhelin"
+									<input type="tel" name="phone" class="left-input-box form-control" placeholder="<?php echo $contact_form_phone; ?>"
 									<?php echo isset($fields['phone']) ? 'value="' . e($fields['phone']) . '"': '' ?>>
 								</div>
 							</div>
 						</div>
 						<div id="right-input-box" class="col-sm-8">
-							<textarea name="message" class="form-control" placeholder="Viestisi"><?php echo isset($fields['message']) ? e($fields['message']) : '' ?></textarea>
+							<textarea name="message" class="form-control" placeholder="<?php echo $contact_form_message; ?>">
+								<?php echo isset($fields['message']) ? e($fields['message']) : '' ?>
+							</textarea>
 						</div>
 					
 				</div>
 				<div class="row">
 					<div class="col-sm-12">
-						<input id="bottom-input-send" type="submit" class="btn btn-primary btn-lg btn-block" value="Lähetä viesti">
+						<input id="bottom-input-send" type="submit" class="btn btn-primary btn-lg btn-block" value="<?php echo $contact_button_text; ?>">
 					</div>
 				</div>
 			</form>
 			<div class="row">
 				<div class="col-sm-12">
 				 	<div class="social-items">
-				 		<a href="https://github.com/henrikra" target="_blank"><i class="fa fa-github-square"></i></a>
-				 		<a href="https://fi.linkedin.com/in/henrikraitasola" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+
+				 		<!-- Github -->
+				 		<?php if(!empty($contact_github)) : ?>
+				 		<a href="<?php echo $contact_github; ?>" target="_blank"><i class="fa fa-github-square"></i></a>
+				 		<?php endif; ?>
+
+				 		<!-- LinkedIn -->
+				 		<?php if(!empty($contact_linkedin)) : ?>
+				 		<a href="<?php echo $contact_linkedin; ?>" target="_blank"><i class="fa fa-linkedin-square"></i></a>
+				 		<?php endif; ?>
+
 				 	</div>
 				</div>
 			</div>
