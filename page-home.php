@@ -9,21 +9,25 @@ $about_me_title_icon				= get_field('about_me_title_icon');
 $about_me_title							= get_field('about_me_title');
 $about_me_content						= get_field('about_me_content');
 $about_me_link_button_text	= get_field('about_me_link_button_text');
-$about_me_profile_picture = get_field('profile_picture');
+$about_me_profile_picture		= get_field('profile_picture');
 
 //Contact
-$contact_title_icon									= get_field('contact_title_icon');
-$contact_title 											= get_field('contact_title');
-$contact_email											= get_field('contact_email');
-$contact_phone											= get_field('contact_phone');
-$contact_location										= get_field('contact_location');
-$contact_form_name									= get_field('contact_form_name');
-$contact_form_email									= get_field('contact_form_email');
-$contact_form_phone									= get_field('contact_form_phone');
-$contact_form_message								= get_field('contact_form_message');
-$contact_button_text								= get_field('contact_button_text');
-$contact_github											= get_field('contact_github');
-$contact_linkedin										= get_field('contact_linkedin');
+$contact_title_icon					= get_field('contact_title_icon');
+$contact_title 							= get_field('contact_title');
+$contact_email							= get_field('contact_email');
+$contact_phone							= get_field('contact_phone');
+$contact_location						= get_field('contact_location');
+$contact_form_name					= get_field('contact_form_name');
+$contact_form_email					= get_field('contact_form_email');
+$contact_form_phone					= get_field('contact_form_phone');
+$contact_form_message				= get_field('contact_form_message');
+$contact_button_text				= get_field('contact_button_text');
+$contact_github							= get_field('contact_github');
+$contact_linkedin						= get_field('contact_linkedin');
+
+//Portfolio
+$portfolio_title_icon				= get_field('portfolio_title_icon');
+$portfolio_title						= get_field('portfolio_title');
 
 
 get_header(); ?>
@@ -130,7 +134,10 @@ get_header(); ?>
 		<article class="wrapper">
 			<div class="row">
 				<div class="col-sm-12">
-					<h2 class="section--header"><i class="fa fa-pencil"></i> Portfolio</h2>
+					<h2 class="section--header">
+						<i class="fa fa-<?php echo $portfolio_title_icon?>"></i>
+						<?php echo $portfolio_title ?>
+					</h2>
 				</div>
 			</div>
 			<div class="row">
@@ -138,74 +145,45 @@ get_header(); ?>
 			</div>
 			<div id="work-samples">
 				<div class="row">
+
+					<?php 
+					$loop = new WP_Query ( array(	'post_type' =>	'work_specimen',
+					 														 	'orderby'		=>	'post_id',
+					 														 	'order'			=>	'ASC' ) );
+					?>
+
+					<?php 
+					// Loop though all work specimens
+					$work_specimen_count = 0;
+					while( $loop->have_posts() ) : $loop->the_post() 
+					?>
+
+					<?php
+					// Check if a new row is needed
+					if($work_specimen_count !== 0 && $work_specimen_count%3 === 0) : ?>
+					</div>
+					<div class="row">
+					<?php endif; ?>
+
 					<div class="col-sm-4 ">
 						<div class="work-sample panel panel-default">
-							<div class="overlay"><p class="lead">Videopelien arvostelusivu</p></div>
-							<a href="http://users.metropolia.fi/~henrikra/projektit/peliarvostelu" target="_blank">
+							<div class="overlay"><p class="lead"><?php the_field('work_specimen_short_description') ?></p></div>
+							<a href="<?php the_field('work_specimen_image_link'); ?>" target="_blank">
 								<div class="panel-body">
-									<img id="game-review-fix" src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/gameReviewsLogo.png" class="img-responsive"
-									alt="GameReviews logo">
+									<img id="game-review-fix" src="<?php echo get_field('work_specimen_picture')['url']; ?>" class="img-responsive"
+									alt="<?php the_field('work_specimen_image_alt_text'); ?>">
 								</div>
 							</a>
 						</div>
 					</div>
-					<div class="col-sm-4">
-						<div class="work-sample panel panel-default">
-							<div class="overlay"><p class="lead">Open dataan perustuva lukujärjestyspalvelu</p></div>
-							<a href="http://users.metropolia.fi/~henrikra/projektit/lukkarikone" target="_blank">
-								<div class="panel-body">
-									<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/lukkari_logo.png" class="img-responsive"
-									alt="Lukkarikone logo">
-								</div>
-							</a>
-						</div>
-					</div>
-					<div class="col-sm-4">
-						<div class="work-sample panel panel-default">
-							<div class="overlay"><p class="lead">Kuvien jako -palvelu</p></div>
-							<a href="http://dev.raitasola.fi/fileupload/" target="_blank">
-								<div class="panel-body">
-									<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/hot_pix.PNG" class="img-responsive"
-									alt="Hot Pix logo">
-								</div>
-							</a>
-						</div>
-					</div>
-				</div>
-				<div class="row">
-					<div class="col-sm-4">
-						<div class="work-sample panel panel-default">
-							<div class="overlay"><p class="lead">Parallax efektien harjoitustyö</p></div>
-							<a href="http://dev.raitasola.fi/parallax/" target="_blank">
-								<div class="panel-body">
-									<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/bb_logo.png" class="img-responsive"
-									alt="Parallax logo">
-								</div>
-							</a>
-						</div>
-					</div>
-					<div class="col-sm-4">
-						<div class="work-sample panel panel-default">
-							<div class="overlay"><p class="lead">Blogi-alusta tyhjästä PHP:lla</p></div>
-							<a href="http://dev.raitasola.fi/blogi/" target="_blank">
-								<div class="panel-body">
-									<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/korea_logo.png" class="img-responsive"
-									alt="Kore Blog logo">
-								</div>
-							</a>
-						</div>
-					</div>
-					<div class="col-sm-4">
-						<div class="work-sample panel panel-default">
-							<div class="overlay"><p class="lead">Luo soittolistoja hakemalla YouTuben rajapinnasta videoita</p></div>
-							<a href="http://dev.raitasola.fi/partylist/" target="_blank">
-								<div class="panel-body">
-									<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/yt_partylist_logo.png" class="img-responsive"
-									alt="YT Part List logo">
-								</div>
-							</a>
-						</div>
-					</div>
+
+					<?php
+					// Increase work specimen count by one
+					$work_specimen_count++;
+					?>
+
+					<?php endwhile; ?>
+
 				</div>
 			</div>
 		</article>
