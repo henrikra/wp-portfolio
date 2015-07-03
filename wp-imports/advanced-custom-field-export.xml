@@ -16,7 +16,7 @@
 <!-- 7. WordPress will then import each of the posts, pages, comments, categories, etc. -->
 <!--    contained in this file into your site. -->
 
-<!-- generator="WordPress/4.2.2" created="2015-07-03 18:10" -->
+<!-- generator="WordPress/4.2.2" created="2015-07-03 20:22" -->
 <rss version="2.0"
 	xmlns:excerpt="http://wordpress.org/export/1.1/excerpt/"
 	xmlns:content="http://purl.org/rss/1.0/modules/content/"
@@ -29,7 +29,7 @@
 	<title>Portfolio - Cv</title>
 	<link>http://localhost/wordpress</link>
 	<description>Just another WordPress site</description>
-	<pubDate>Fri, 03 Jul 2015 18:10:21 +0000</pubDate>
+	<pubDate>Fri, 03 Jul 2015 20:22:13 +0000</pubDate>
 	<language></language>
 	<wp:wxr_version>1.1</wp:wxr_version>
 	<wp:base_site_url>http://localhost/wordpress</wp:base_site_url>
@@ -517,6 +517,52 @@
 		<wp:postmeta>
 			<wp:meta_key>rule</wp:meta_key>
 			<wp:meta_value><![CDATA[a:5:{s:5:"param";s:9:"post_type";s:8:"operator";s:2:"==";s:5:"value";s:13:"work_specimen";s:8:"order_no";i:0;s:8:"group_no";i:0;}]]></wp:meta_value>
+		</wp:postmeta>
+	</item>
+	<item>
+		<title>Social Link</title>
+		<link>http://localhost/wordpress/?acf=acf_social-link</link>
+		<pubDate>Fri, 03 Jul 2015 19:27:49 +0000</pubDate>
+		<dc:creator>pekka</dc:creator>
+		<guid isPermaLink="false">http://localhost/wordpress/?post_type=acf&#038;p=166</guid>
+		<wp:post_id>166</wp:post_id>
+		<wp:post_date>2015-07-03 21:27:49</wp:post_date>
+		<wp:post_date_gmt>2015-07-03 19:27:49</wp:post_date_gmt>
+		<wp:comment_status>closed</wp:comment_status>
+		<wp:ping_status>closed</wp:ping_status>
+		<wp:post_name>acf_social-link</wp:post_name>
+		<wp:status>publish</wp:status>
+		<wp:post_parent>0</wp:post_parent>
+		<wp:menu_order>0</wp:menu_order>
+		<wp:post_type>acf</wp:post_type>
+		<wp:post_password></wp:post_password>
+		<wp:postmeta>
+			<wp:meta_key>_edit_last</wp:meta_key>
+			<wp:meta_value><![CDATA[1]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>field_5596dfdad1854</wp:meta_key>
+			<wp:meta_value><![CDATA[a:13:{s:3:"key";s:19:"field_5596dfdad1854";s:5:"label";s:16:"Social site name";s:4:"name";s:21:"social_link_site_name";s:4:"type";s:5:"radio";s:12:"instructions";s:198:"Select a predefined social site name. You can also use 'other' selection. Select one from http://fortawesome.github.io/Font-Awesome/icons/#brand. For example type reddit to link your reddit account.";s:8:"required";s:1:"1";s:7:"choices";a:8:{s:8:"facebook";s:8:"Facebook";s:7:"twitter";s:7:"Twitter";s:11:"google-plus";s:7:"Google+";s:7:"youtube";s:7:"Youtube";s:5:"steam";s:5:"Steam";s:6:"twitch";s:6:"Twitch";s:6:"github";s:6:"Github";s:9:"bitbucket";s:9:"Bitbucket";}s:12:"other_choice";s:1:"1";s:17:"save_other_choice";s:1:"0";s:13:"default_value";s:0:"";s:6:"layout";s:8:"vertical";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>position</wp:meta_key>
+			<wp:meta_value><![CDATA[normal]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>layout</wp:meta_key>
+			<wp:meta_value><![CDATA[no_box]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>hide_on_screen</wp:meta_key>
+			<wp:meta_value><![CDATA[a:1:{i:0;s:9:"permalink";}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>field_5596e247e7d02</wp:meta_key>
+			<wp:meta_value><![CDATA[a:14:{s:3:"key";s:19:"field_5596e247e7d02";s:5:"label";s:4:"Link";s:4:"name";s:16:"social_link_link";s:4:"type";s:4:"text";s:12:"instructions";s:38:"Link that leads to the site you desire";s:8:"required";s:1:"1";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"none";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_5596dfdad1854";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:1;}]]></wp:meta_value>
+		</wp:postmeta>
+		<wp:postmeta>
+			<wp:meta_key>rule</wp:meta_key>
+			<wp:meta_value><![CDATA[a:5:{s:5:"param";s:9:"post_type";s:8:"operator";s:2:"==";s:5:"value";s:11:"social_link";s:8:"order_no";i:0;s:8:"group_no";i:0;}]]></wp:meta_value>
 		</wp:postmeta>
 	</item>
 </channel>
