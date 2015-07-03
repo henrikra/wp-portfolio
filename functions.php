@@ -129,6 +129,28 @@ function remove_page_attributes() {
 }
 add_action('admin_menu', 'remove_page_attributes');
 
+/* 
+YRITYS PIILOTTAA CSS AVULLA turhia publish:iin liittyviä kohtia
+Ei toiminut
+
+function hide_publishing_actions() {
+	$my_post_type = 'POST_TYPE';
+	global $post;
+	if( $post->post_type == $my_post_type) {
+		echo '
+			<style type="text/css">
+			#misc-publishing-actions,
+			#minor-publishing-actions {
+				display: none;
+			}
+			</style>
+		';
+	}
+}
+add_action('admin-head-post.php', 'hide_publishing_actions');
+add_action('admin_head-post-new.php', 'hide_publishing_actions');
+*/
+
 /**
  * Implement the Custom Header feature.
  */
