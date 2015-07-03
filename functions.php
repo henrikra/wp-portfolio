@@ -124,6 +124,11 @@ function portfoliocv_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'portfoliocv_scripts' );
 
+function remove_page_attributes() {
+	remove_meta_box( 'pageparentdiv', 'page','side');
+}
+add_action('admin_menu', 'remove_page_attributes');
+
 /**
  * Implement the Custom Header feature.
  */
