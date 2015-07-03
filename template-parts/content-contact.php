@@ -113,15 +113,18 @@ $contact_linkedin					= get_field('contact_linkedin');
 				<div class="col-sm-12">
 				 	<div class="social-items">
 
-				 		<!-- Github -->
-				 		<?php if(!empty($contact_github)) : ?>
-				 		<a href="<?php echo $contact_github; ?>" target="_blank"><i class="fa fa-github-square"></i></a>
-				 		<?php endif; ?>
+						<?php
+						$loop = new WP_Query(array(
+							'post_type' => 'social_link',
+							'orderby' => 'post_id',
+							'order' => 'ASC'
+						));
+						?>
+						<?php while($loop->have_posts()) : $loop->the_post(); ?>
 
-				 		<!-- LinkedIn -->
-				 		<?php if(!empty($contact_linkedin)) : ?>
-				 		<a href="<?php echo $contact_linkedin; ?>" target="_blank"><i class="fa fa-linkedin-square"></i></a>
-				 		<?php endif; ?>
+				 		<a href="<?php the_field('social_link_link'); ?>" target="_blank"><span class="fa-stack"><i class="fa fa-square fa-lg"></i><i class="fa fa-<?php the_field('social_link_site_name'); ?> fa-stack-1x fa-inverse"></i></span></a>
+
+						<?php endwhile; wp_reset_query(); ?>
 
 				 	</div>
 				</div>
