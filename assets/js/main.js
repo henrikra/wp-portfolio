@@ -80,6 +80,22 @@
 	});
 	
 	$('#navigation').hcSticky();
+
+	$('.dial').each(function(i, elem) {
+		var color = $(elem).data('color');
+		$(elem).knob({
+			'readOnly': true,
+			'fgColor': color,
+			'thickness': 0.13,
+			'format' : function (value) {
+				return value + ' %';
+			},
+			'font': 'Abel',
+			'width': 160,
+			'height': 160,
+			'bgColor': ColorLuminance(color, -0.4)
+		});
+	});
 	
 	if (!isIEMobile()) {
 		var animationOffSet;
@@ -125,35 +141,6 @@
 			}
 		});
 		
-		$('.dial').each(function(i, elem) {
-			var color = $(elem).next().attr('class');
-			if (color === 'php-blue') {
-				color = '#558AEF';
-			} else if (color === 'html5-orange') {
-				color = '#F16529';
-			} else if (color === 'javascript-yellow') {
-				color = '#FFDA3E';
-			} else if (color === 'jquery-blue') {
-				color = ColorLuminance('#0868AC', 0.2);
-			} else if (color === 'angularjs-red') {
-				color = ColorLuminance('#C4473A', 0.1);
-			} else if (color === 'css-blue') {
-				color = '#29A9DF';
-			}
-			$(elem).knob({
-				'readOnly': true,
-				'fgColor': color,
-				'thickness': 0.13,
-				'format' : function (value) {
-					return value + ' %';
-				},
-				'font': 'Abel',
-				'width': 160,
-				'height': 160,
-				'bgColor': ColorLuminance(color, -0.4)
-			});
-		});
-		
 		$('#skills .row .skill').viewportChecker({
 			offset: 150,
 			callbackFunction: function(elem, action){
@@ -165,42 +152,11 @@
 						duration: 2500,
 						easing: 'easeOutQuart',
 						progress: function () {
-							elm.val(Math.ceil(this.value)).trigger('change')
+							elm.val(Math.ceil(this.value)).trigger('change');
 						}
 					});
 				});
 			}
-		});
-		
-	} else {
-		$('.dial').each(function(i, elem) {
-			$(elem).attr('value',$(elem).data('value'));
-			var color = $(elem).next().attr('class');
-			if (color === 'php-blue') {
-				color = '#558AEF';
-			} else if (color === 'html5-orange') {
-				color = '#F16529';
-			} else if (color === 'javascript-yellow') {
-				color = '#FFDA3E';
-			} else if (color === 'jquery-blue') {
-				color = ColorLuminance('#0868AC', 0.2);
-			} else if (color === 'angularjs-red') {
-				color = ColorLuminance('#C4473A', 0.1);
-			} else if (color === 'css-blue') {
-				color = '#29A9DF';
-			}
-			$(elem).knob({
-				'readOnly': true,
-				'fgColor': color,
-				'thickness': 0.13,
-				'format' : function (value) {
-					return value + ' %';
-				},
-				'font': 'Dosis',
-				'width': 160,
-				'height': 160,
-				'bgColor': ColorLuminance(color, -0.4)
-			});
 		});
 	}
 	

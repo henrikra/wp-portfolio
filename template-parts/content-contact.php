@@ -12,8 +12,6 @@ $contact_form_email					= get_field('contact_form_email');
 $contact_form_phone					= get_field('contact_form_phone');
 $contact_form_message				= get_field('contact_form_message');
 $contact_button_text				= get_field('contact_button_text');
-$contact_github						= get_field('contact_github');
-$contact_linkedin					= get_field('contact_linkedin');
 
 ?>
 

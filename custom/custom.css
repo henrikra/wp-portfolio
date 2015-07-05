@@ -182,6 +182,23 @@ hr {
   margin-left: 30px;
 }
 
+.skill {
+  margin-bottom: 50px;
+  text-align: center;
+}
+.skill--title {
+  font-size: 30px;
+  margin-top: 10px;
+}
+.skill--meter {
+  pointer-events: none;
+}
+.skill--image {
+  margin-bottom: 20px;
+  max-height: 50px;
+  max-width: 100px;
+}
+
 .logged-in #navigation.sticky {
   top: 32px !important;
 }
@@ -210,40 +227,6 @@ hr {
 
 #technical-skills #skills {
   margin-top: 50px;
-}
-#technical-skills #skills .skill {
-  margin-bottom: 50px;
-  text-align: center;
-}
-#technical-skills #skills .skill h3 {
-  font-size: 30px;
-  margin-top: 10px;
-}
-#technical-skills #skills .skill h3.html5-orange {
-  color: #F16529;
-}
-#technical-skills #skills .skill h3.php-blue {
-  color: #558AEF;
-}
-#technical-skills #skills .skill h3.javascript-yellow {
-  color: #FFDA3E;
-}
-#technical-skills #skills .skill h3.jquery-blue {
-  color: #0A7DCE;
-}
-#technical-skills #skills .skill h3.angularjs-red {
-  color: #EB5546;
-}
-#technical-skills #skills .skill h3.css-blue {
-  color: #29A9DF;
-}
-#technical-skills #skills .skill .dial {
-  pointer-events: none;
-}
-#technical-skills #skills .skill img {
-  margin-bottom: 20px;
-  max-height: 50px;
-  max-width: 100px;
 }
 
 .image-rotate {
