@@ -580,6 +580,26 @@ hr {
   top: 0;
 }
 
+.social-link {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+.social-link--content {
+  width: auto;
+  height: auto;
+  color: #666;
+}
+.social-link--content:hover {
+  color: #333;
+}
+.social-link--icon {
+  font-size: 35px;
+  top: 1px;
+}
+.social-link + .social-link {
+  margin-left: 30px;
+}
+
 .logged-in #navigation.sticky {
   top: 32px !important;
 }
@@ -745,20 +765,8 @@ input[type=text], input[type=email], input[type=tel] {
   margin-bottom: 40px;
 }
 
-.social-items {
-  font-size: 50px;
+.social-icons {
   text-align: center;
-  margin-bottom: 20px;
-}
-.social-items a {
-  display: inline-block;
-  color: #666;
-}
-.social-items a:hover {
-  color: #333;
-}
-.social-items a + a {
-  margin-left: 30px;
 }
 
 #about {

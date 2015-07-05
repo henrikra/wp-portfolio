@@ -111,7 +111,7 @@ $contact_linkedin					= get_field('contact_linkedin');
 			</form>
 			<div class="row">
 				<div class="col-sm-12">
-				 	<div class="social-items">
+				 	<div class="social-icons">
 
 						<?php
 						$loop = new WP_Query(array(
@@ -122,7 +122,9 @@ $contact_linkedin					= get_field('contact_linkedin');
 						?>
 						<?php while($loop->have_posts()) : $loop->the_post(); ?>
 
-				 		<a href="<?php the_field('social_link_link'); ?>" target="_blank"><span class="fa-stack"><i class="fa fa-square fa-lg"></i><i class="fa fa-<?php the_field('social_link_site_name'); ?> fa-stack-1x fa-inverse"></i></span></a>
+						<a href="<?php the_field('social_link_link'); ?>" class="social-link" target="_blank"><span class="fa-stack social-link--content">
+							<i class="fa fa-square"></i><i class="social-link--icon fa fa-<?php the_field('social_link_site_name'); ?> fa-stack-1x fa-inverse"></i>
+						</span></a>
 
 						<?php endwhile; wp_reset_query(); ?>
 
