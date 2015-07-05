@@ -1,0 +1,422 @@
+@charset "UTF-8";
+/*--- Vendor prefixes --- */
+body {
+  font-family: "Ubuntu", sans-serif;
+  font-size: 16px;
+}
+
+h2, h3 {
+  font-family: "Abel", sans-serif;
+}
+
+/* Poistetaan outline vain jos hiiri on käytössä */
+a:active, a:hover {
+  outline: none;
+}
+
+html:hover #navigation a, html:hover #header-to-content-btn {
+  outline: none;
+}
+
+hr {
+  border-width: 3px 0 0;
+}
+
+.wrapper {
+  max-width: 960px;
+  margin: 0px auto;
+}
+
+/*--- Header --- */
+#header {
+  height: 100vh;
+  background-image: url("../images/header-bg.jpg");
+  background-size: cover;
+  background-position: top;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+}
+#header .header--full-name {
+  font-size: 70px;
+  font-weight: 400;
+  margin: 10px 0 0;
+}
+#header .header--job-title {
+  margin: 0 0 50px;
+  font-size: 50px;
+}
+#header .header--continue-btn {
+  position: absolute;
+  bottom: 40px;
+  background: transparent;
+  font-size: 40px;
+  left: 50%;
+  border: 2px solid #666;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  border-radius: 50%;
+  padding: 8px 17px;
+  margin-left: -39px;
+  color: #666;
+  display: none;
+}
+#header .header--continue-btn:focus {
+  outline: #fff dotted 1px;
+}
+#header .header--continue-btn:hover {
+  border-color: #007AED;
+  color: #007AED;
+}
+#header .header--continue-btn .glyphicon {
+  top: 7px;
+  left: 1px;
+}
+
+/*--- Navbar --- */
+#navigation {
+  z-index: 3;
+  border-bottom: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  border-radius: 0;
+}
+#navigation .active {
+  border-bottom: solid #007AED 4px;
+}
+#navigation .navbar-header a {
+  color: #fff;
+}
+
+.section, .section-dark {
+  padding: 50px 0px;
+  z-index: 2;
+}
+.section--header {
+  font-size: 50px;
+  text-align: center;
+}
+
+.section-dark {
+  background: #333;
+}
+.section-dark .section--header {
+  color: #fff;
+}
+
+.work-sample {
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+.work-sample.landing-start {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: all 0.5s ease-in-out;
+}
+.work-sample.landing-end {
+  opacity: 1;
+  transform: translateX(0px);
+}
+.work-sample--overlay {
+  background: rgba(51, 51, 51, 0.8);
+  width: 100%;
+  height: 160px;
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 0;
+  transition: all 0.4s;
+  pointer-events: none;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+}
+.work-sample--description {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-size: 19px;
+}
+.work-sample .panel-body {
+  height: 160px;
+  padding: 0;
+  text-align: center;
+}
+.work-sample--image {
+  display: inline;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.work-sample:hover .work-sample--overlay {
+  top: 0;
+}
+
+.social-link {
+  font-size: 50px;
+  margin-bottom: 20px;
+}
+.social-link--content {
+  width: auto;
+  height: auto;
+  color: #666;
+}
+.social-link--content:hover {
+  color: #333;
+}
+.social-link--icon {
+  font-size: 35px;
+  top: 1px;
+}
+.social-link + .social-link {
+  margin-left: 30px;
+}
+
+.logged-in #navigation.sticky {
+  top: 32px !important;
+}
+
+@media (max-width: 782px) {
+  .logged-in #navigation.sticky {
+    top: 46px !important;
+  }
+}
+.container-fluid {
+  overflow: hidden;
+}
+
+.hr-center, #header-hr {
+  float: none;
+  margin: 0 auto;
+}
+
+#header-hr hr {
+  border-color: #333;
+}
+
+#to-portfolio-btn {
+  margin-top: 52px;
+}
+
+#technical-skills #skills {
+  margin-top: 50px;
+}
+#technical-skills #skills .skill {
+  margin-bottom: 50px;
+  text-align: center;
+}
+#technical-skills #skills .skill h3 {
+  font-size: 30px;
+  margin-top: 10px;
+}
+#technical-skills #skills .skill h3.html5-orange {
+  color: #F16529;
+}
+#technical-skills #skills .skill h3.php-blue {
+  color: #558AEF;
+}
+#technical-skills #skills .skill h3.javascript-yellow {
+  color: #FFDA3E;
+}
+#technical-skills #skills .skill h3.jquery-blue {
+  color: #0A7DCE;
+}
+#technical-skills #skills .skill h3.angularjs-red {
+  color: #EB5546;
+}
+#technical-skills #skills .skill h3.css-blue {
+  color: #29A9DF;
+}
+#technical-skills #skills .skill .dial {
+  pointer-events: none;
+}
+#technical-skills #skills .skill img {
+  margin-bottom: 20px;
+  max-height: 50px;
+  max-width: 100px;
+}
+
+.image-rotate {
+  transform: rotate(90deg);
+}
+
+#job-experince .job .panel-heading {
+  line-height: 47px;
+}
+#job-experince .job .panel-heading h3 {
+  margin: 0px;
+  line-height: 47px;
+}
+#job-experince .job .panel-heading img {
+  max-height: 30px;
+  display: inline;
+}
+#job-experince .job .panel-heading .company-logo {
+  max-height: 40px;
+}
+#job-experince .job .panel-heading:hover {
+  cursor: pointer;
+  background-image: linear-gradient(to bottom, #E7E7E7 0px, #D2D2D2 100%);
+  border-color: #D2D2D2;
+}
+#job-experince .job .panel-body {
+  display: none;
+}
+
+.invisible {
+  opacity: 0;
+}
+
+.visible {
+  opacity: 1;
+}
+
+#contact {
+  padding-bottom: 0;
+}
+#contact .btn {
+  margin-top: 10px;
+}
+#contact #right-input-box {
+  padding-left: 0px;
+}
+#contact #right-input-box textarea {
+  height: 112px;
+}
+
+.glyphicon {
+  top: 5px;
+}
+
+.alert-success {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  border-radius: 0;
+}
+
+footer {
+  font-size: 12px;
+  text-align: center;
+  padding-top: 5px;
+  padding-bottom: 25px;
+}
+footer #linkedin img {
+  max-height: 25px;
+  margin-top: 4px;
+}
+
+input[type=text], input[type=email], input[type=tel] {
+  margin-bottom: 5px;
+}
+
+.lead {
+  margin-bottom: 0;
+}
+
+.hr-extra-margin {
+  margin-bottom: 50px;
+}
+
+.contact-item {
+  text-align: center;
+  line-height: 35px;
+  margin-bottom: 50px;
+}
+.contact-item i {
+  font-size: 50px;
+}
+.contact-item a {
+  color: #333;
+}
+
+#contact-form {
+  margin-bottom: 40px;
+}
+
+.social-icons {
+  text-align: center;
+}
+
+#about {
+  padding-bottom: 0;
+}
+#about .about-me {
+  padding-top: 60px;
+}
+
+.btn, .panel, .form-control {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  border-radius: 0;
+}
+
+@media (max-width: 767px) {
+  #header {
+    background-attachment: scroll;
+  }
+  #header .header--full-name {
+    font-size: 50px;
+  }
+
+  section {
+    padding: 0px 0px 25px;
+  }
+
+  #job-experince .job h3 {
+    font-size: 21px;
+  }
+  #job-experince .job .panel-heading {
+    line-height: 15px;
+  }
+
+  h2 {
+    font-size: 35px;
+  }
+
+  /* Poistetaan Iphone zoom-efekti */
+  input[type="text"], input[type="email"], input[type="tel"], textarea {
+    font-size: 16px;
+  }
+
+  #henrik-img {
+    margin-bottom: 15px;
+  }
+
+  #contact #contact-form {
+    margin-top: 30px;
+  }
+  #contact #right-input-box {
+    padding-left: 15px;
+  }
+
+  footer {
+    text-align: center;
+  }
+
+  #about .about-me {
+    background: #eee none repeat scroll 0% 0%;
+    margin-top: -191px;
+    padding: 15px 15px 20px;
+    margin-bottom: 30px;
+    box-shadow: 0px 4px 5px #bebebe;
+  }
+
+  .contact-item {
+    margin-bottom: 25px;
+  }
+}
