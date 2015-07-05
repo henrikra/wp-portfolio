@@ -528,6 +528,58 @@ hr {
   color: #fff;
 }
 
+.work-sample {
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+.work-sample.landing-start {
+  opacity: 0;
+  transform: translateX(-20px);
+  transition: all 0.5s ease-in-out;
+}
+.work-sample.landing-end {
+  opacity: 1;
+  transform: translateX(0px);
+}
+.work-sample--overlay {
+  background: rgba(51, 51, 51, 0.8);
+  width: 100%;
+  height: 160px;
+  position: absolute;
+  z-index: 1;
+  top: 100%;
+  left: 0;
+  transition: all 0.4s;
+  pointer-events: none;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+}
+.work-sample--description {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  font-size: 19px;
+}
+.work-sample .panel-body {
+  height: 160px;
+  padding: 0;
+  text-align: center;
+}
+.work-sample--image {
+  display: inline;
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+.work-sample:hover .work-sample--overlay {
+  top: 0;
+}
+
 .logged-in #navigation.sticky {
   top: 32px !important;
 }
@@ -625,60 +677,6 @@ hr {
 
 .visible {
   opacity: 1;
-}
-
-#portfolio .work-sample {
-  position: relative;
-  margin-bottom: 30px;
-}
-#portfolio .work-sample.landing-start {
-  opacity: 0;
-  transform: translateX(-20px);
-  transition: all 0.5s ease-in-out;
-}
-#portfolio .work-sample.landing-end {
-  opacity: 1;
-  transform: translateX(0px);
-}
-#portfolio .work-sample a {
-  text-decoration: none;
-  color: #000;
-}
-#portfolio .work-sample .overlay {
-  background: rgba(51, 51, 51, 0.9);
-  width: 100%;
-  height: 160px;
-  position: absolute;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  transition: all 0.4s;
-  pointer-events: none;
-  color: #fff;
-  padding: 20px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-#portfolio .work-sample .panel-body {
-  height: 160px;
-  position: relative;
-}
-#portfolio .work-sample .panel-body img {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-}
-#portfolio .work-sample .panel-body #game-review-fix {
-  margin-left: -6px;
-}
-#portfolio .work-sample:hover {
-  cursor: pointer;
 }
 
 #contact {

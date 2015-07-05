@@ -243,12 +243,4 @@
 		}
   	});
 	
-	$('.work-sample').on('mouseenter', function() {
-		$(this).find('.overlay').css('opacity', 1);
-	});
-	
-	$('.work-sample').on('mouseleave', function() {
-		$(this).find('.overlay').css('opacity', 0);
-	});	
-	
 })();

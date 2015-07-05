@@ -42,10 +42,10 @@ $portfolio_title					= get_field('portfolio_title');
 
 					<div class="col-sm-4 ">
 						<div class="work-sample panel panel-default">
-							<div class="overlay"><p class="lead"><?php the_field('work_specimen_short_description') ?></p></div>
+							<div class="work-sample--overlay"><p class="lead work-sample--description"><?php the_field('work_specimen_short_description') ?></p></div>
 							<a href="<?php the_field('work_specimen_image_link'); ?>" target="_blank">
 								<div class="panel-body">
-									<img id="game-review-fix" src="<?php echo get_field('work_specimen_picture')['url']; ?>" class="img-responsive"
+									<img src="<?php echo get_field('work_specimen_picture')['url']; ?>" class="img-responsive work-sample--image"
 									alt="<?php the_field('work_specimen_image_alt_text'); ?>">
 								</div>
 							</a>
