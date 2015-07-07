@@ -24,23 +24,23 @@
 	}
 	
 	// Työkokemus valinnat
-	$('.job .panel-heading').on('click', function() {
-		var currentJob = $(this).siblings();
-		$('.job .panel-body').not(currentJob).slideUp();
-		$(this).siblings().slideToggle('500');
-		var currentJobArrow = $(this).find('img').first();
-		$('.arrow').not(currentJobArrow).removeClass('image-rotate');
-		$(this).find('img').first().toggleClass('image-rotate');
+	jQuery('.job .panel-heading').on('click', function() {
+		var currentJob = jQuery(this).siblings();
+		jQuery('.job .panel-body').not(currentJob).slideUp();
+		jQuery(this).siblings().slideToggle('500');
+		var currentJobArrow = jQuery(this).find('img').first();
+		jQuery('.arrow').not(currentJobArrow).removeClass('image-rotate');
+		jQuery(this).find('img').first().toggleClass('image-rotate');
 	});
 	
-	$('#contact-form').submit(function() {
-		$('#bottom-input-send').attr("value", 'Odota...');
-		$('#bottom-input-send').attr("disabled", true);
+	jQuery('#contact-form').submit(function() {
+		jQuery('#bottom-input-send').attr("value", 'Odota...');
+		jQuery('#bottom-input-send').attr("disabled", true);
 		
 		// Jos mobiiliverkko katkeaa niin käyttäjä voi lähettää uudestaan formin
 		setTimeout(function(){
-			$('#bottom-input-send').attr("value", 'Lähetä viesti');
-			$('#bottom-input-send').attr("disabled", false); 
+			jQuery('#bottom-input-send').attr("value", 'Lähetä viesti');
+			jQuery('#bottom-input-send').attr("disabled", false); 
 		}, 5000);
 	});
 	
@@ -48,42 +48,42 @@
 		animationOffSet = 90;
 	} else {
 		animationOffSet = 100;
-		$('.navbar-right li').eq(0).addClass('active');
-		$('.header--continue-btn').show();
+		jQuery('.navbar-right li').eq(0).addClass('active');
+		jQuery('.header--continue-btn').show();
 		
-		$(window).scroll(function() {
-			var windscroll = $(window).scrollTop();
-			if (windscroll < $('.navbar').offset().top) {
-				$('header .container-fluid').css({'opacity':( 100-windscroll/Math.floor($(window).height()/100) )/100});
-				$('header .container-fluid').css({'transform': 'translate(0px, ' + windscroll/2 + 'px)'});
-				$('header .header--continue-btn').css({'transform': 'translate(0px, ' + windscroll*1.5 + 'px)'});
+		jQuery(window).scroll(function() {
+			var windscroll = jQuery(window).scrollTop();
+			if (windscroll < jQuery('.navbar').offset().top) {
+				jQuery('header .container-fluid').css({'opacity':( 100-windscroll/Math.floor(jQuery(window).height()/100) )/100});
+				jQuery('header .container-fluid').css({'transform': 'translate(0px, ' + windscroll/2 + 'px)'});
+				jQuery('header .header--continue-btn').css({'transform': 'translate(0px, ' + windscroll*1.5 + 'px)'});
 			}
-			$('section').each(function(i) {
-				if ($(window).scrollTop() + $(window).height() == $(document).height()) {
-					$('.navbar-right li.active').removeClass('active');
-					$('.navbar-right li').eq(4).addClass('active');
+			jQuery('section').each(function(i) {
+				if (jQuery(window).scrollTop() + jQuery(window).height() == jQuery(document).height()) {
+					jQuery('.navbar-right li.active').removeClass('active');
+					jQuery('.navbar-right li').eq(4).addClass('active');
 				}
-				else if ($(this).position().top <= windscroll + $(window).height()/2.5) {
-					$('.navbar-right li.active').removeClass('active');
-					$('.navbar-right li').eq(i).addClass('active');
+				else if (jQuery(this).position().top <= windscroll + jQuery(window).height()/2.5) {
+					jQuery('.navbar-right li.active').removeClass('active');
+					jQuery('.navbar-right li').eq(i).addClass('active');
 				}
 			});
 		}).scroll();
 	}
 	
-	$( window ).resize(function() {
-		if ($(window).width() < 768 || window.innerHeight < 540) {
-			$('.header--continue-btn').hide();
+	jQuery( window ).resize(function() {
+		if (jQuery(window).width() < 768 || window.innerHeight < 540) {
+			jQuery('.header--continue-btn').hide();
 		} else {
-			$('.header--continue-btn').show();
+			jQuery('.header--continue-btn').show();
 		}
 	});
 	
-	$('#navigation').hcSticky();
+	jQuery('#navigation').hcSticky();
 
-	$('.dial').each(function(i, elem) {
-		var color = $(elem).data('color');
-		$(elem).knob({
+	jQuery('.dial').each(function(i, elem) {
+		var color = jQuery(elem).data('color');
+		jQuery(elem).knob({
 			'readOnly': true,
 			'fgColor': color,
 			'thickness': 0.13,
@@ -100,55 +100,55 @@
 	if (!isIEMobile()) {
 		var animationOffSet;
 		
-		$('.header--full-name').addClass('invisible').viewportChecker({
+		jQuery('.header--full-name').addClass('invisible').viewportChecker({
 			classToAdd: 'visible animated bounceInLeft',
 			offset: animationOffSet
 		});
 		
-		$('.job').addClass('invisible').viewportChecker({
+		jQuery('.job').addClass('invisible').viewportChecker({
 			classToAdd: 'visible animated slideInUp',
 			offset: animationOffSet
 		});
-		$('.article-header').addClass('invisible').viewportChecker({
+		jQuery('.article-header').addClass('invisible').viewportChecker({
 			classToAdd: 'visible animated slideInUp',
 			offset: animationOffSet
 		});
 		
-		$('.left-input-box').addClass('invisible').viewportChecker({
+		jQuery('.left-input-box').addClass('invisible').viewportChecker({
 			classToAdd: 'visible animated slideInLeft',
 			offset: animationOffSet
 		});
 		
-		$('#right-input-box textarea').addClass('invisible').viewportChecker({
+		jQuery('#right-input-box textarea').addClass('invisible').viewportChecker({
 			classToAdd: 'visible animated slideInRight',
 			offset: animationOffSet
 		});
 		
-		$('#bottom-input-send').addClass('invisible').viewportChecker({
+		jQuery('#bottom-input-send').addClass('invisible').viewportChecker({
 			classToAdd: 'visible animated slideInUp',
 			offset: 20
 		});		
 		
-		$('#work-samples .work-sample').addClass('landing-start');
-		$('#work-samples').viewportChecker({
+		jQuery('#work-samples .work-sample').addClass('landing-start');
+		jQuery('#work-samples').viewportChecker({
 			offset: 20,
 			callbackFunction: function(elem, action){
-				$('#work-samples .work-sample').each(function(i) {
+				jQuery('#work-samples .work-sample').each(function(i) {
 					setTimeout(function() {
-						$('#work-samples .work-sample').eq(i).addClass('landing-end');
+						jQuery('#work-samples .work-sample').eq(i).addClass('landing-end');
 					}, 200 * (i+1));
 				});
 			}
 		});
 		
-		$('#skills .row .skill').viewportChecker({
+		jQuery('#skills .row .skill').viewportChecker({
 			offset: 150,
 			callbackFunction: function(elem, action){
-				$(elem).find('.dial').each(function () {
-					var elm = $(this);
+				jQuery(elem).find('.dial').each(function () {
+					var elm = jQuery(this);
 					var perc = elm.data("value");  
 
-					$({value: 0}).animate({ value: perc }, {
+					jQuery({value: 0}).animate({ value: perc }, {
 						duration: 2500,
 						easing: 'easeOutQuart',
 						progress: function () {
@@ -162,40 +162,40 @@
 	
 	menuOffSet = 50;
 	// Menu navigoinnit
-	$('.menu-item').on('click', function(event) {
+	jQuery('.menu-item').on('click', function(event) {
 		event.preventDefault();
-		var section = $(this).attr('id').substr(5);
-		$('html, body').animate({
-        scrollTop: $('#' + section).offset().top - menuOffSet
+		var section = jQuery(this).attr('id').substr(5);
+		jQuery('html, body').animate({
+        scrollTop: jQuery('#' + section).offset().top - menuOffSet
     }, 1000);
 	});
 	
-	$('#to-portfolio-btn').on('click', function(event) {
-		$('html, body').animate({
-        scrollTop: $('#portfolio').offset().top - menuOffSet
+	jQuery('#to-portfolio-btn').on('click', function(event) {
+		jQuery('html, body').animate({
+        scrollTop: jQuery('#portfolio').offset().top - menuOffSet
     }, 1000);
 	});
 	
-	$('header .header--continue-btn').on('click', function(event) {
-		$('html, body').animate({
-        scrollTop: $('#about').offset().top - menuOffSet
+	jQuery('header .header--continue-btn').on('click', function(event) {
+		jQuery('html, body').animate({
+        scrollTop: jQuery('#about').offset().top - menuOffSet
     }, 1000);
 	});
 	
-	$("#menu-home").on('click', function(event) {
+	jQuery("#menu-home").on('click', function(event) {
 		event.preventDefault();
-    $('html, body').animate({
+    jQuery('html, body').animate({
         scrollTop: 0
     }, 1000);
 		if (window.innerWidth < 768) {
-			$('#bs-example-navbar-collapse-1').collapse('hide');
+			jQuery('#bs-example-navbar-collapse-1').collapse('hide');
 		}
 	});
 	
 	// Sulje hamburger menu kun valitaan menu item
-	$('#bs-example-navbar-collapse-1').on("click", function () {
+	jQuery('#bs-example-navbar-collapse-1').on("click", function () {
 		if (window.innerWidth < 768) {
-			$(this).collapse('hide');
+			jQuery(this).collapse('hide');
 		}
   	});
 	
