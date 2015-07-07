@@ -73,40 +73,9 @@ $contact_button_text				= get_field('contact_button_text');
 					<ul><li><?php echo implode('</li><li>', $errors) ?></li></ul>
 				</div>
 			<?php endif; ?>
-			<form id="contact-form" action="contact.php" method="post">
-				<div class="row">
-					
-						<div class="col-sm-4">
-							<div class="row">
-								<div class="col-sm-12">
-									<input type="text" name="name" class="left-input-box form-control" placeholder="<?php echo $contact_form_name; ?>"
-									<?php echo isset($fields['name']) ? 'value="' . e($fields['name']) . '"': '' ?>>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-12">
-									<input type="email" name="email" class="left-input-box form-control" placeholder="<?php echo $contact_form_email; ?>"
-									<?php echo isset($fields['email']) ? 'value="' . e($fields['email']) . '"': '' ?>>
-								</div>
-							</div>
-							<div class="row">
-								<div class="col-sm-12">
-									<input type="tel" name="phone" class="left-input-box form-control" placeholder="<?php echo $contact_form_phone; ?>"
-									<?php echo isset($fields['phone']) ? 'value="' . e($fields['phone']) . '"': '' ?>>
-								</div>
-							</div>
-						</div>
-						<div id="right-input-box" class="col-sm-8">
-							<textarea name="message" class="form-control" placeholder="<?php echo $contact_form_message; ?>"><?php echo isset($fields['message']) ? e($fields['message']) : '' ?></textarea>
-						</div>
-					
-				</div>
-				<div class="row">
-					<div class="col-sm-12">
-						<input id="bottom-input-send" type="submit" class="btn btn-primary btn-lg btn-block" value="<?php echo $contact_button_text; ?>">
-					</div>
-				</div>
-			</form>
+			
+			<?php echo do_shortcode('[contact-form-7 id="199" title="Contact form"]') ?>
+
 			<div class="row">
 				<div class="col-sm-12">
 				 	<div class="social-icons">
@@ -127,14 +96,6 @@ $contact_button_text				= get_field('contact_button_text');
 						<?php endwhile; wp_reset_query(); ?>
 
 				 	</div>
-				</div>
-			</div>
-			<div class="row">
-				<div class="col-sm-12"><hr/></div>
-			</div>
-			<div class="row">
-				<div class="col-sm-12">
-					<footer>Copyright &copy 2015 Henrik Raitasola</footer>
 				</div>
 			</div>
 		</article>
