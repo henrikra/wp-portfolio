@@ -98,6 +98,14 @@ $contact_button_text				= get_field('contact_button_text');
 				 	</div>
 				</div>
 			</div>
+			<div class="row">
+				<div class="col-sm-12"><hr/></div>
+			</div>
+			<div class="row">
+				<div class="col-sm-12">
+					<footer>Copyright &copy <?php echo date(Y) . ' '; the_author(); ?></footer>
+				</div>
+			</div>
 		</article>
 	</div>
 </section>
