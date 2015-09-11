@@ -446,7 +446,7 @@ hr {
 }
 
 /*--- Header --- */
-#header {
+.header {
   height: 100vh;
   background-image: url("../images/header-bg.jpg");
   background-size: cover;
@@ -459,16 +459,19 @@ hr {
   position: relative;
   text-align: center;
 }
-#header .header--full-name {
+.header--logo {
+  max-width: 250px;
+}
+.header--full-name {
   font-size: 70px;
   font-weight: 400;
   margin: 10px 0 0;
 }
-#header .header--job-title {
+.header--job-title {
   margin: 0 0 50px;
   font-size: 50px;
 }
-#header .header--continue-btn {
+.header--continue-btn {
   position: absolute;
   bottom: 40px;
   background: transparent;
@@ -484,32 +487,16 @@ hr {
   color: #666;
   display: none;
 }
-#header .header--continue-btn:focus {
+.header--continue-btn:focus {
   outline: #fff dotted 1px;
 }
-#header .header--continue-btn:hover {
+.header--continue-btn:hover {
   border-color: #007AED;
   color: #007AED;
 }
-#header .header--continue-btn .glyphicon {
+.header--continue-btn .glyphicon {
   top: 7px;
   left: 1px;
-}
-
-/*--- Navbar --- */
-#navigation {
-  z-index: 3;
-  border-bottom: 0;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  -ms-border-radius: 0;
-  border-radius: 0;
-}
-#navigation .active {
-  border-bottom: solid #007AED 4px;
-}
-#navigation .navbar-header a {
-  color: #fff;
 }
 
 .section, .section-dark {
@@ -636,6 +623,16 @@ div.wpcf7-response-output .fa {
   font-size: 19px;
 }
 
+.alert-success {
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  border-radius: 0;
+}
+
 .wpcf7-not-valid {
   border-color: red;
 }
@@ -645,38 +642,37 @@ span.wpcf7-not-valid-tip {
   margin-bottom: 15px;
 }
 
-.logged-in #navigation.sticky {
-  top: 32px !important;
+/*--- Navbar --- */
+#navigation {
+  z-index: 3;
+  border-bottom: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  border-radius: 0;
+}
+#navigation .active {
+  border-bottom: solid #007AED 4px;
+}
+#navigation .navbar-header a {
+  color: #fff;
 }
 
-@media (max-width: 782px) {
-  .logged-in #navigation.sticky {
-    top: 46px !important;
-  }
-}
-.container-fluid {
-  overflow: hidden;
+footer {
+  font-size: 12px;
+  text-align: center;
+  padding: 5px 0 25px;
 }
 
-.hr-center, #header-hr {
-  float: none;
-  margin: 0 auto;
+#about .about-me {
+  padding-top: 60px;
 }
-
-#header-hr hr {
-  border-color: #333;
-}
-
-#to-portfolio-btn {
+#about #to-portfolio-btn {
   margin-top: 52px;
 }
 
 #technical-skills #skills {
   margin-top: 50px;
-}
-
-.image-rotate {
-  transform: rotate(90deg);
 }
 
 #job-experince .job .panel-heading {
@@ -702,14 +698,6 @@ span.wpcf7-not-valid-tip {
   display: none;
 }
 
-.invisible {
-  opacity: 0;
-}
-
-.visible {
-  opacity: 1;
-}
-
 #contact {
   padding-bottom: 0;
 }
@@ -726,29 +714,42 @@ span.wpcf7-not-valid-tip {
   height: 112px;
 }
 
+.logged-in #navigation.sticky {
+  top: 32px !important;
+}
+
+@media (max-width: 782px) {
+  .logged-in #navigation.sticky {
+    top: 46px !important;
+  }
+}
+.container-fluid {
+  overflow: hidden;
+}
+
+.hr-center, #header-hr {
+  float: none;
+  margin: 0 auto;
+}
+
+#header-hr hr {
+  border-color: #333;
+}
+
+.image-rotate {
+  transform: rotate(90deg);
+}
+
+.invisible {
+  opacity: 0;
+}
+
+.visible {
+  opacity: 1;
+}
+
 .glyphicon {
   top: 5px;
-}
-
-.alert-success {
-  position: absolute;
-  top: 0px;
-  width: 100%;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  -ms-border-radius: 0;
-  border-radius: 0;
-}
-
-footer {
-  font-size: 12px;
-  text-align: center;
-  padding-top: 5px;
-  padding-bottom: 25px;
-}
-footer #linkedin img {
-  max-height: 25px;
-  margin-top: 4px;
 }
 
 .lead {
@@ -777,13 +778,6 @@ footer #linkedin img {
 
 .social-icons {
   text-align: center;
-}
-
-#about {
-  padding-bottom: 0;
-}
-#about .about-me {
-  padding-top: 60px;
 }
 
 .btn, .panel, .form-control {

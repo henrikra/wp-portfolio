@@ -4,7 +4,7 @@
 
 
 /*--- Header ---*/
-#header
+.header
 	height: 100vh
 	background: 
 		image: url("../images/header-bg.jpg")
@@ -18,16 +18,19 @@
 	position: relative
 	text-align: center
 		
-	.header--full-name
+	&--logo
+		max-width: 250px
+
+	&--full-name
 		font-size: 70px
 		font-weight: 400
 		margin: 10px 0 0
 		
-	.header--job-title
+	&--job-title
 		margin: 0 0 50px
 		font-size: 50px
 
-	.header--continue-btn
+	&--continue-btn
 		position: absolute
 		bottom: 40px
 		background: transparent
@@ -50,16 +53,3 @@
 		.glyphicon
 			top: 7px
 			left: 1px
-
-/*--- Navbar ---*/
-#navigation
-	z-index: 3
-	border-bottom: 0
-	@include border-radius(0)
-	
-	.active
-		border-bottom: solid $main-blue 4px
-
-	.navbar-header	
-		a
-			color: #fff
