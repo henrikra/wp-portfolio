@@ -1,0 +1,47 @@
+.work-place
+	cursor: pointer
+	position: relative
+
+
+	&--arrow
+		width: 35px
+		height: 35px
+		margin-top: 8px
+
+	&--company-logo
+		max-height: 39px
+		margin-top: 5px
+
+
+	&--company
+		margin: 0
+		display: inline-block
+		font-weight: bold
+
+	&--period
+		position: absolute
+		color: #666
+		font-size: 14px
+		right: 15px
+		top: 0
+
+	&--description
+		display: none
+
+	&--heading
+		&:hover
+			background-image: linear-gradient(to bottom, #E7E7E7 0px, #D2D2D2 100%)
+			border-color: #D2D2D2
+
+
+@media (max-width: 767px)
+	.work-place
+		&--company
+			margin-top: 10px
+
+		&--period
+			position: static
+
+
+.image-rotate
+	transform: rotate(90deg)

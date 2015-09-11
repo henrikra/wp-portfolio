@@ -17,29 +17,28 @@
 			));
 			?>
 			<?php while($loop->have_posts()) : $loop->the_post(); ?>
-			<div class="row">
-				<div class="col-sm-12">
-					<div class="job panel panel-default">
-						<div class="panel-heading">
-							<div class="row">
-								<div class="col-sm-1 col-xs-2">
-									<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/arrow-right.png" class="arrow"
-									alt="Open/Close arrow">
-								</div>
-								<div class="col-sm-3 col-xs-10">
-									<img src="<?php echo get_field('company_logo')['url'] ?>"
-									class="company-logo img-responsive" alt="Hellewi logo">
-								</div>
-								<div class="col-sm-5"><h3><?php the_field('job_title'); ?><?php echo ' - '; the_field('company_name'); ?></h3></div>
-								<div class="working-time col-sm-3"><?php the_field('job_start_date'); ?> - <?php the_field('job_end_date'); ?></div>
+				<div class="work-place panel panel-default">
+					<div class="work-place--heading panel-heading">
+						<div class="row">
+							<div class="col-sm-1 col-xs-2">
+								<img src="<?php bloginfo('stylesheet_directory'); ?>/assets/images/arrow-right.png" class="work-place--arrow"
+								alt="Open/Close arrow">
+							</div>
+							<div class="col-sm-3 col-xs-10">
+								<img src="<?php echo get_field('company_logo')['url'] ?>"
+								class="work-place--company-logo img-responsive" alt="Hellewi logo">
+							</div>
+							<div class="col-sm-8">
+								<h3 class="work-place--company"><?php the_field('company_name'); ?></h3>
+								<div class="work-place--title"><?php the_field('job_title'); ?></div>
+								<div class="work-place--period"><?php the_field('job_start_date'); ?> - <?php the_field('job_end_date'); ?></div>
 							</div>
 						</div>
-						<div class="panel-body">
-							<?php the_field('job_description'); ?>
-						</div>
+					</div>
+					<div class="work-place--description panel-body">
+						<?php the_field('job_description'); ?>
 					</div>
 				</div>
-			</div>
 			<?php endwhile; wp_reset_query(); ?>
 		</article>
 	</div>

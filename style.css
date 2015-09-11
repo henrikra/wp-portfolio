@@ -664,6 +664,54 @@ footer {
   padding: 5px 0 25px;
 }
 
+.work-place {
+  cursor: pointer;
+  position: relative;
+}
+.work-place--arrow {
+  width: 35px;
+  height: 35px;
+  margin-top: 8px;
+}
+.work-place--company-logo {
+  max-height: 39px;
+  margin-top: 5px;
+}
+.work-place--company {
+  margin: 0;
+  display: inline-block;
+  font-weight: bold;
+}
+.work-place--period {
+  position: absolute;
+  color: #666;
+  font-size: 14px;
+  right: 15px;
+  top: 0;
+}
+.work-place--description {
+  display: none;
+}
+.work-place--heading:hover {
+  background-image: linear-gradient(to bottom, #E7E7E7 0px, #D2D2D2 100%);
+  border-color: #D2D2D2;
+}
+
+@media (max-width: 767px) {
+  .work-place--company {
+    margin-top: 10px;
+  }
+  .work-place--period {
+    position: static;
+  }
+}
+.image-rotate {
+  transform: rotate(90deg);
+}
+
+#about {
+  padding-bottom: 0;
+}
 #about .about-me {
   padding-top: 60px;
 }
@@ -673,29 +721,6 @@ footer {
 
 #technical-skills #skills {
   margin-top: 50px;
-}
-
-#job-experince .job .panel-heading {
-  line-height: 47px;
-}
-#job-experince .job .panel-heading h3 {
-  margin: 0px;
-  line-height: 47px;
-}
-#job-experince .job .panel-heading img {
-  max-height: 30px;
-  display: inline;
-}
-#job-experince .job .panel-heading .company-logo {
-  max-height: 40px;
-}
-#job-experince .job .panel-heading:hover {
-  cursor: pointer;
-  background-image: linear-gradient(to bottom, #E7E7E7 0px, #D2D2D2 100%);
-  border-color: #D2D2D2;
-}
-#job-experince .job .panel-body {
-  display: none;
 }
 
 #contact {
@@ -734,10 +759,6 @@ footer {
 
 #header-hr hr {
   border-color: #333;
-}
-
-.image-rotate {
-  transform: rotate(90deg);
 }
 
 .invisible {
@@ -799,13 +820,6 @@ footer {
     padding: 0px 0px 25px;
   }
 
-  #job-experince .job h3 {
-    font-size: 21px;
-  }
-  #job-experince .job .panel-heading {
-    line-height: 15px;
-  }
-
   h2 {
     font-size: 35px;
   }
@@ -815,19 +829,11 @@ footer {
     font-size: 16px;
   }
 
-  #henrik-img {
-    margin-bottom: 15px;
-  }
-
   #contact #contact-form {
     margin-top: 30px;
   }
   #contact #right-input-box {
     padding-left: 15px;
-  }
-
-  footer {
-    text-align: center;
   }
 
   #about .about-me {
