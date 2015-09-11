@@ -16,7 +16,7 @@
 <!-- 7. WordPress will then import each of the posts, pages, comments, categories, etc. -->
 <!--    contained in this file into your site. -->
 
-<!-- generator="WordPress/4.2.4" created="2015-09-11 15:38" -->
+<!-- generator="WordPress/4.2.4" created="2015-09-11 21:21" -->
 <rss version="2.0"
 	xmlns:excerpt="http://wordpress.org/export/1.1/excerpt/"
 	xmlns:content="http://purl.org/rss/1.0/modules/content/"
@@ -29,7 +29,7 @@
 	<title>Portfolio - Cv</title>
 	<link>http://localhost/wordpress</link>
 	<description>Just another WordPress site</description>
-	<pubDate>Fri, 11 Sep 2015 15:38:27 +0000</pubDate>
+	<pubDate>Fri, 11 Sep 2015 21:21:53 +0000</pubDate>
 	<language></language>
 	<wp:wxr_version>1.1</wp:wxr_version>
 	<wp:base_site_url>http://localhost/wordpress</wp:base_site_url>
@@ -832,7 +832,7 @@
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>field_559649459ea6b</wp:meta_key>
-			<wp:meta_value><![CDATA[a:14:{s:3:"key";s:19:"field_559649459ea6b";s:5:"label";s:17:"Short Description";s:4:"name";s:31:"work_specimen_short_description";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"none";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:3;}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:14:{s:3:"key";s:19:"field_559649459ea6b";s:5:"label";s:17:"Short Description";s:4:"name";s:31:"work_specimen_short_description";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"none";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:2;}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>position</wp:meta_key>
@@ -847,12 +847,8 @@
 			<wp:meta_value><![CDATA[a:1:{i:0;s:9:"permalink";}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
-			<wp:meta_key>field_55966481f6715</wp:meta_key>
-			<wp:meta_value><![CDATA[a:14:{s:3:"key";s:19:"field_55966481f6715";s:5:"label";s:22:"Image Alternative Text";s:4:"name";s:28:"work_specimen_image_alt_text";s:4:"type";s:4:"text";s:12:"instructions";s:95:"Please provide image alternative text for users with slow internet connection or screen reader.";s:8:"required";s:1:"1";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"none";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:1;}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
 			<wp:meta_key>field_5596651ff6716</wp:meta_key>
-			<wp:meta_value><![CDATA[a:14:{s:3:"key";s:19:"field_5596651ff6716";s:5:"label";s:10:"Image Link";s:4:"name";s:24:"work_specimen_image_link";s:4:"type";s:4:"text";s:12:"instructions";s:36:"Provide a link to the work specimen.";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"none";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:2;}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:14:{s:3:"key";s:19:"field_5596651ff6716";s:5:"label";s:10:"Image Link";s:4:"name";s:24:"work_specimen_image_link";s:4:"type";s:4:"text";s:12:"instructions";s:36:"Provide a link to the work specimen.";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"none";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:1;}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>_edit_last</wp:meta_key>
@@ -864,7 +860,7 @@
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>field_559649459ea6b</wp:meta_key>
-			<wp:meta_value><![CDATA[a:14:{s:3:"key";s:19:"field_559649459ea6b";s:5:"label";s:17:"Short Description";s:4:"name";s:31:"work_specimen_short_description";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"none";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:3;}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:14:{s:3:"key";s:19:"field_559649459ea6b";s:5:"label";s:17:"Short Description";s:4:"name";s:31:"work_specimen_short_description";s:4:"type";s:4:"text";s:12:"instructions";s:0:"";s:8:"required";s:1:"1";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"none";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:2;}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>position</wp:meta_key>
@@ -879,12 +875,8 @@
 			<wp:meta_value><![CDATA[a:1:{i:0;s:9:"permalink";}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
-			<wp:meta_key>field_55966481f6715</wp:meta_key>
-			<wp:meta_value><![CDATA[a:14:{s:3:"key";s:19:"field_55966481f6715";s:5:"label";s:22:"Image Alternative Text";s:4:"name";s:28:"work_specimen_image_alt_text";s:4:"type";s:4:"text";s:12:"instructions";s:95:"Please provide image alternative text for users with slow internet connection or screen reader.";s:8:"required";s:1:"1";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"none";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:1;}]]></wp:meta_value>
-		</wp:postmeta>
-		<wp:postmeta>
 			<wp:meta_key>field_5596651ff6716</wp:meta_key>
-			<wp:meta_value><![CDATA[a:14:{s:3:"key";s:19:"field_5596651ff6716";s:5:"label";s:10:"Image Link";s:4:"name";s:24:"work_specimen_image_link";s:4:"type";s:4:"text";s:12:"instructions";s:36:"Provide a link to the work specimen.";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"none";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:2;}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:14:{s:3:"key";s:19:"field_5596651ff6716";s:5:"label";s:10:"Image Link";s:4:"name";s:24:"work_specimen_image_link";s:4:"type";s:4:"text";s:12:"instructions";s:36:"Provide a link to the work specimen.";s:8:"required";s:1:"0";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"none";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:1;}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>rule</wp:meta_key>
@@ -914,7 +906,7 @@
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>field_5596dfdad1854</wp:meta_key>
-			<wp:meta_value><![CDATA[a:13:{s:3:"key";s:19:"field_5596dfdad1854";s:5:"label";s:16:"Social site name";s:4:"name";s:21:"social_link_site_name";s:4:"type";s:5:"radio";s:12:"instructions";s:198:"Select a predefined social site name. You can also use 'other' selection. Select one from http://fortawesome.github.io/Font-Awesome/icons/#brand. For example type reddit to link your reddit account.";s:8:"required";s:1:"1";s:7:"choices";a:8:{s:8:"facebook";s:8:"Facebook";s:7:"twitter";s:7:"Twitter";s:11:"google-plus";s:7:"Google+";s:7:"youtube";s:7:"Youtube";s:5:"steam";s:5:"Steam";s:6:"twitch";s:6:"Twitch";s:6:"github";s:6:"Github";s:9:"bitbucket";s:9:"Bitbucket";}s:12:"other_choice";s:1:"1";s:17:"save_other_choice";s:1:"0";s:13:"default_value";s:0:"";s:6:"layout";s:8:"vertical";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:13:{s:3:"key";s:19:"field_5596dfdad1854";s:5:"label";s:16:"Social site name";s:4:"name";s:21:"social_link_site_name";s:4:"type";s:5:"radio";s:12:"instructions";s:198:"Select a predefined social site name. You can also use 'other' selection. Select one from http://fortawesome.github.io/Font-Awesome/icons/#brand. For example type reddit to link your reddit account.";s:8:"required";s:1:"1";s:7:"choices";a:9:{s:8:"linkedin";s:8:"LinkedIn";s:8:"facebook";s:8:"Facebook";s:7:"twitter";s:7:"Twitter";s:11:"google-plus";s:7:"Google+";s:7:"youtube";s:7:"Youtube";s:5:"steam";s:5:"Steam";s:6:"twitch";s:6:"Twitch";s:6:"github";s:6:"Github";s:9:"bitbucket";s:9:"Bitbucket";}s:12:"other_choice";s:1:"1";s:17:"save_other_choice";s:1:"0";s:13:"default_value";s:0:"";s:6:"layout";s:8:"vertical";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>position</wp:meta_key>
@@ -930,7 +922,7 @@
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>field_5596e247e7d02</wp:meta_key>
-			<wp:meta_value><![CDATA[a:14:{s:3:"key";s:19:"field_5596e247e7d02";s:5:"label";s:4:"Link";s:4:"name";s:16:"social_link_link";s:4:"type";s:4:"text";s:12:"instructions";s:38:"Link that leads to the site you desire";s:8:"required";s:1:"1";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"none";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_5596dfdad1854";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:1;}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:14:{s:3:"key";s:19:"field_5596e247e7d02";s:5:"label";s:4:"Link";s:4:"name";s:16:"social_link_link";s:4:"type";s:4:"text";s:12:"instructions";s:38:"Link that leads to the site you desire";s:8:"required";s:1:"1";s:13:"default_value";s:0:"";s:11:"placeholder";s:18:"http://example.com";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"none";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_5596dfdad1854";s:8:"operator";s:2:"==";s:5:"value";s:8:"linkedin";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:1;}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>_edit_last</wp:meta_key>
@@ -938,7 +930,7 @@
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>field_5596dfdad1854</wp:meta_key>
-			<wp:meta_value><![CDATA[a:13:{s:3:"key";s:19:"field_5596dfdad1854";s:5:"label";s:16:"Social site name";s:4:"name";s:21:"social_link_site_name";s:4:"type";s:5:"radio";s:12:"instructions";s:198:"Select a predefined social site name. You can also use 'other' selection. Select one from http://fortawesome.github.io/Font-Awesome/icons/#brand. For example type reddit to link your reddit account.";s:8:"required";s:1:"1";s:7:"choices";a:8:{s:8:"facebook";s:8:"Facebook";s:7:"twitter";s:7:"Twitter";s:11:"google-plus";s:7:"Google+";s:7:"youtube";s:7:"Youtube";s:5:"steam";s:5:"Steam";s:6:"twitch";s:6:"Twitch";s:6:"github";s:6:"Github";s:9:"bitbucket";s:9:"Bitbucket";}s:12:"other_choice";s:1:"1";s:17:"save_other_choice";s:1:"0";s:13:"default_value";s:0:"";s:6:"layout";s:8:"vertical";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:13:{s:3:"key";s:19:"field_5596dfdad1854";s:5:"label";s:16:"Social site name";s:4:"name";s:21:"social_link_site_name";s:4:"type";s:5:"radio";s:12:"instructions";s:198:"Select a predefined social site name. You can also use 'other' selection. Select one from http://fortawesome.github.io/Font-Awesome/icons/#brand. For example type reddit to link your reddit account.";s:8:"required";s:1:"1";s:7:"choices";a:9:{s:8:"linkedin";s:8:"LinkedIn";s:8:"facebook";s:8:"Facebook";s:7:"twitter";s:7:"Twitter";s:11:"google-plus";s:7:"Google+";s:7:"youtube";s:7:"Youtube";s:5:"steam";s:5:"Steam";s:6:"twitch";s:6:"Twitch";s:6:"github";s:6:"Github";s:9:"bitbucket";s:9:"Bitbucket";}s:12:"other_choice";s:1:"1";s:17:"save_other_choice";s:1:"0";s:13:"default_value";s:0:"";s:6:"layout";s:8:"vertical";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:2:{s:5:"field";s:4:"null";s:8:"operator";s:2:"==";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:0;}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>position</wp:meta_key>
@@ -954,7 +946,7 @@
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>field_5596e247e7d02</wp:meta_key>
-			<wp:meta_value><![CDATA[a:14:{s:3:"key";s:19:"field_5596e247e7d02";s:5:"label";s:4:"Link";s:4:"name";s:16:"social_link_link";s:4:"type";s:4:"text";s:12:"instructions";s:38:"Link that leads to the site you desire";s:8:"required";s:1:"1";s:13:"default_value";s:0:"";s:11:"placeholder";s:0:"";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"none";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_5596dfdad1854";s:8:"operator";s:2:"==";s:5:"value";s:0:"";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:1;}]]></wp:meta_value>
+			<wp:meta_value><![CDATA[a:14:{s:3:"key";s:19:"field_5596e247e7d02";s:5:"label";s:4:"Link";s:4:"name";s:16:"social_link_link";s:4:"type";s:4:"text";s:12:"instructions";s:38:"Link that leads to the site you desire";s:8:"required";s:1:"1";s:13:"default_value";s:0:"";s:11:"placeholder";s:18:"http://example.com";s:7:"prepend";s:0:"";s:6:"append";s:0:"";s:10:"formatting";s:4:"none";s:9:"maxlength";s:0:"";s:17:"conditional_logic";a:3:{s:6:"status";s:1:"0";s:5:"rules";a:1:{i:0;a:3:{s:5:"field";s:19:"field_5596dfdad1854";s:8:"operator";s:2:"==";s:5:"value";s:8:"linkedin";}}s:8:"allorany";s:3:"all";}s:8:"order_no";i:1;}]]></wp:meta_value>
 		</wp:postmeta>
 		<wp:postmeta>
 			<wp:meta_key>rule</wp:meta_key>
