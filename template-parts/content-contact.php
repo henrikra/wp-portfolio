@@ -7,11 +7,6 @@ $contact_title 						= get_field('contact_title');
 $contact_email						= get_field('contact_email');
 $contact_phone						= get_field('contact_phone');
 $contact_location					= get_field('contact_location');
-$contact_form_name					= get_field('contact_form_name');
-$contact_form_email					= get_field('contact_form_email');
-$contact_form_phone					= get_field('contact_form_phone');
-$contact_form_message				= get_field('contact_form_message');
-$contact_button_text				= get_field('contact_button_text');
 
 ?>
 
