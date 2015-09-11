@@ -29,7 +29,7 @@ $about_me_profile_picture			= get_field('profile_picture');
 			<div class="row">
 				<div class="col-sm-4">
 					<img id="henrik-img" class="img-responsive" src="<?php echo $about_me_profile_picture['url']; ?>"
-					alt="Henrik Raitasola" title="Henrik Raitasola">
+					alt="Profile picture">
 				</div>
 				<div class="col-sm-8">
 					<div class="about-me">

@@ -2,7 +2,7 @@
 <?php
 /* ACF */
 //Contact
-$contact_title_icon					= get_field('contact_title_icon');
+$contact_title_icon				= get_field('contact_title_icon');
 $contact_title 						= get_field('contact_title');
 $contact_email						= get_field('contact_email');
 $contact_phone						= get_field('contact_phone');
