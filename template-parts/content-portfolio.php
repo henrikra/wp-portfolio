@@ -2,6 +2,8 @@
 /* Advanced custom fields */
 $portfolio_title_icon				= get_field('portfolio_title_icon');
 $portfolio_title					= get_field('portfolio_title');
+
+
 ?>
 
 <section id="portfolio" class="section">
@@ -22,9 +24,11 @@ $portfolio_title					= get_field('portfolio_title');
 				<div class="row">
 
 					<?php 
-					$loop = new WP_Query ( array(	'post_type' =>	'work_specimen',
-					 														 	'orderby'		=>	'post_id',
-					 														 	'order'			=>	'ASC' ) );
+					$loop = new WP_Query ( array(	
+						'post_type' =>	'work_specimen',
+					 	'orderby'		=>	'post_id',
+					 	'order'			=>	'ASC' )
+					);
 					?>
 
 					<?php 
@@ -46,11 +50,13 @@ $portfolio_title					= get_field('portfolio_title');
 							<a href="<?php the_field('work_specimen_image_link'); ?>" target="_blank">
 								<div class="panel-body">
 									<img src="<?php echo get_field('work_specimen_picture')['url']; ?>" class="img-responsive work-sample--image"
-									alt="<?php the_field('work_specimen_image_alt_text'); ?>">
+									alt="<?php echo get_field('work_specimen_picture')['alt'] ? get_field('work_specimen_picture')['alt'] : 'Work experience image'; ?>">
+									
 								</div>
 							</a>
 						</div>
 					</div>
+
 
 					<?php
 					// Increase work specimen count by one

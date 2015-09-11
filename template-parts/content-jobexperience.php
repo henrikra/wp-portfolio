@@ -28,7 +28,7 @@
 								</div>
 								<div class="col-sm-3 col-xs-10">
 									<img src="<?php echo get_field('company_logo')['url'] ?>"
-									class="company-logo img-responsive" alt="Hellewi logo">
+									class="company-logo img-responsive" alt="Company logo">
 								</div>
 								<div class="col-sm-5"><h3><?php the_field('job_title'); ?><?php echo ' - '; the_field('company_name'); ?></h3></div>
 								<div class="working-time col-sm-3"><?php the_field('job_start_date'); ?> - <?php the_field('job_end_date'); ?></div>
