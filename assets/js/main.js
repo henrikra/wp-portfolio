@@ -24,9 +24,9 @@
 	}
 	
 	// Työkokemus valinnat
-	jQuery('.job .panel-heading').on('click', function() {
+	jQuery('.work-place .panel-heading').on('click', function() {
 		var currentJob = jQuery(this).siblings();
-		jQuery('.job .panel-body').not(currentJob).slideUp();
+		jQuery('.work-place .panel-body').not(currentJob).slideUp();
 		jQuery(this).siblings().slideToggle('500');
 		var currentJobArrow = jQuery(this).find('img').first();
 		jQuery('.arrow').not(currentJobArrow).removeClass('image-rotate');
@@ -105,7 +105,7 @@
 			offset: animationOffSet
 		});
 		
-		jQuery('.job').addClass('invisible').viewportChecker({
+		jQuery('.work-place').addClass('invisible').viewportChecker({
 			classToAdd: 'visible animated slideInUp',
 			offset: animationOffSet
 		});
