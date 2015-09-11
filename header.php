@@ -39,7 +39,7 @@ $header_bg = get_field('header_background');
 <body <?php body_class(); ?>>
 <div id="page" class="hfeed site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'portfoliocv' ); ?></a>
-	<header id="header" style="background-image: url(<?php echo $header_bg['url']; ?>)">
+	<header class="header" style="background-image: url(<?php echo $header_bg['url']; ?>)">
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-sm-12">
