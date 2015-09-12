@@ -670,7 +670,6 @@ footer {
 }
 
 .work-place {
-  cursor: pointer;
   position: relative;
 }
 .work-place--arrow {
@@ -696,6 +695,9 @@ footer {
 }
 .work-place--description {
   display: none;
+}
+.work-place--heading {
+  cursor: pointer;
 }
 .work-place--heading:hover {
   background-image: linear-gradient(to bottom, #E7E7E7 0px, #D2D2D2 100%);
