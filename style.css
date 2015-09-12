@@ -567,6 +567,11 @@ hr {
   top: 0;
 }
 
+@media (max-width: 767px) {
+  .work-sample {
+    margin-bottom: 15px;
+  }
+}
 .social-link {
   font-size: 50px;
   margin-bottom: 20px;
@@ -698,6 +703,9 @@ footer {
 }
 
 @media (max-width: 767px) {
+  .work-place {
+    margin-bottom: 15px;
+  }
   .work-place--company {
     margin-top: 10px;
   }

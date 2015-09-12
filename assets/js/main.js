@@ -189,7 +189,7 @@
 	        scrollTop: 0
 	    }, 1000);
 			if (window.innerWidth < 768) {
-				$('#bs-example-navbar-collapse-1').collapse('hide');
+				$('#bs-example-navbar-collapse-1').removeClass('in');
 			}
 		});
 		
