@@ -518,6 +518,7 @@ hr {
 .work-sample {
   margin-bottom: 30px;
   overflow: hidden;
+  position: relative;
 }
 .work-sample.landing-start {
   opacity: 0;
@@ -556,7 +557,7 @@ hr {
   text-align: center;
 }
 .work-sample--image {
-  display: inline;
+  margin: 0 auto;
   position: relative;
   top: 50%;
   -webkit-transform: translateY(-50%);
