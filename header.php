@@ -84,6 +84,7 @@ $header_bg = get_field('header_background');
 							'theme_location' => 'primary',
 							'container' => 'nav',
 							'container_class' => 'navbar-collapse collapse',
+							'container_id' => 'bs-example-navbar-collapse-1',
 							'menu_class' => 'nav navbar-nav navbar-right'
 						));
 					?>
